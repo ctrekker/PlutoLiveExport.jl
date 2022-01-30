@@ -1,0 +1,4 @@
+name = "PlutoLiveExport"
+uuid = "27cf6249-c7ba-466c-943c-2006590103b7"
+authors = ["Connor Burns <ctrekker4@gmail.com>"]
+version = "0.1.0"
