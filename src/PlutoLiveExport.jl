@@ -33,9 +33,9 @@ function save_export(format::String, root_save_path::String, nb::Pluto.Notebook,
 end
 
 
-function live_export(format::String = "html"; save_path = joinpath(homedir(), "Documents", "Pluto Exports"))
-    if !isdir(save_path)
-        mkdir(save_path)
+function live_export(format::String = "html"; export_path = joinpath(homedir(), "Documents", "Pluto Exports"))
+    if !isdir(export_path)
+        mkdir(export_path)
     end
 
     # make this an alias of "statefile" because I can see them getting confused
@@ -50,7 +50,7 @@ function live_export(format::String = "html"; save_path = joinpath(homedir(), "D
     function on_pluto_event(e::Pluto.FileEditEvent)
         try
             response = HTTP.get(_export_url(e.notebook, _format_map[format]))
-            save_export(format, save_path, e.notebook, response.body)
+            save_export(format, export_path, e.notebook, response.body)
         catch e
             @warn "Failed to fetch notebook '$(format)' export"
             showerror(stderr, e)
