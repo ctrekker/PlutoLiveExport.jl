@@ -35,7 +35,7 @@ The only positional argument of `live_export` is `format`, which can be used to 
 
 As an example, to export to statefiles we would use `live_export("statefile")`.
 
-> _[what's a statefile??](https://plutopublish.com/docs/statefiles)_
+> _[what's a statefile??](https://plutopublish.com/docs/statefiles.md)_
 
 To export into multiple formats simultaneously, pass a vector of formats instead.
 
