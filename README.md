@@ -4,10 +4,8 @@ Keep an updated export of every notebook you edit for quick viewing and publishi
 
 ## Installation
 
-_Coming to general registry soon!_
-
 ```julia
-(@v1.7) pkg> add https://github.com/ctrekker/PlutoLiveExport.jl
+(@v1.7) pkg> add PlutoLiveExport
 ```
 
 ## Usage
@@ -25,7 +23,7 @@ By default this will automatically make exports to `HOME/Documents/Pluto Exports
 
 ```julia
 using Pluto, PlutoLiveExport
-Pluto.run(; on_export=live_export(; export_path = "/my/special/export/path"))
+Pluto.run(; on_export=live_export(; export_path = "/my/export/path"))
 ```
 
 ## Export Configuration
@@ -37,7 +35,7 @@ The only positional argument of `live_export` is `format`, which can be used to 
 
 As an example, to export to statefiles we would use `live_export("statefile")`.
 
-> _[what's a statefile??](about:blank)_
+> _[what's a statefile??](https://plutopublish.com/docs/statefiles)_
 
 To export into multiple formats simultaneously, pass a vector of formats instead.
 
