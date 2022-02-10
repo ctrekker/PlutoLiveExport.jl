@@ -19,7 +19,7 @@ Pluto.run(; on_export=live_export())
 
 _Make sure to call `live_export` as a function (`live_export()`)_
 
-By default this will automatically make exports to `HOME/Documents/Pluto Exports` every time you make a change in a notebook. You can change where these exports get placed by providing a path to the `export_path` keyword argument.
+By default this will automatically make exports to `~/Documents/Pluto Exports` every time you make a change in a notebook. You can change where these exports get placed by providing a path to the `export_path` keyword argument.
 
 ```julia
 using Pluto, PlutoLiveExport
